@@ -38,6 +38,12 @@ namespace LambdaSnippet.Controllers
                 return result;
             });
 
+            var models = customers.Select(y => new
+            {
+                y.Name,
+                y.Age
+            });
+
             //var numbers = new List<int>() {1, 5, 3, 55, 2};
             //var r = numbers.Sum();
 
