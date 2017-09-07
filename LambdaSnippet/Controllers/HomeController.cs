@@ -61,9 +61,9 @@ namespace LambdaSnippet.Controllers
         public ActionResult LatestProducts()
         {
             // Latest
-            var products = this.Testdata();
-            var vm = new ProductsVM();
-            vm.Products = products.OrderByDescending(x => x.Created).Take(10).ToList();
+            //var products = this.Testdata();
+            //var vm = new ProductsVM();
+            //vm.Products = products.OrderByDescending(x => x.Created).Take(10).ToList();
 
             // Random
             var products = this.Testdata();
