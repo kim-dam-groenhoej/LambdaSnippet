@@ -9,5 +9,7 @@ namespace LambdaSnippet.Models
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
+
+        public DateTime Created { get; set; }
     }
 }

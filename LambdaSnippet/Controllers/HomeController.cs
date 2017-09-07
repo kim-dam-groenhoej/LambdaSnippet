@@ -58,6 +58,22 @@ namespace LambdaSnippet.Controllers
             return View();
         }
 
+        public ActionResult LatestProducts()
+        {
+            // Latest
+            var products = this.Testdata();
+            var vm = new ProductsVM();
+            vm.Products = products.OrderByDescending(x => x.Created).Take(10).ToList();
+
+            // Random
+            var products = this.Testdata();
+            var vm = new ProductsVM();
+            vm.Products = products.OrderByDescending(x => new Random().Next(int.MinValue, int.MaxValue)).Take(10).ToList();
+
+
+            return View(vm);
+        }
+
         private List<Product> Testdata()
         {
             var products = new List<Product>();
