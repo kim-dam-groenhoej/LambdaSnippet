@@ -1,0 +1,13 @@
+﻿@model LambdaSnippet.ViewModels.ProductsVM
+@{
+    ViewBag.Title = "LatestProducts";
+}
+
+<h2>Random products</h2>
+
+@foreach (var item in Model.Products)
+{
+    <div>
+        @item.Name
+    </div>
+}
